@@ -1,0 +1,552 @@
+.main {
+  $self: &;
+  padding-top: 120px;
+
+  @include mq(md) {
+    padding-top: 90px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include mq(md) {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  &__body-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 40px;
+    margin: 0 -40px;
+
+    @include mq(md) {
+      padding: unset;
+      margin: unset;
+    }
+  }
+
+  &__body-inner-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 25px 30px;
+    margin-top: 40px;
+    background: $color-light-ice;
+    border-radius: 10px;
+
+    @include mq(lg) {
+      padding: 15px 20px;
+      margin-top: 20px;
+    }
+
+    @include mq(md) {
+      width: 100%;
+      flex: unset;
+    }
+  }
+
+  &__body-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 8px;
+    background: $color-white;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: flex;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background: $color-steel-blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__body-slide-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    padding: 12px;
+    background: $color-steel-blue;
+    border-radius: 50%;
+    border: unset;
+  }
+
+  &__title {
+    font-size: 44px;
+    width: 100%;
+    padding-bottom: 20px;
+    color: $color-teal;
+    border-bottom: 1px solid $color-pastel-blue;
+  }
+
+  &__body-tabs {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 15px 0 30px 0;
+
+    @include mq(md) {
+      overflow-x: scroll;
+      height: 50px;
+    }
+  }
+
+  &__body-tab {
+    position: relative;
+    font-size: 20px;
+    width: fit-content;
+    color: $color-dark-green;
+    border: unset;
+    background: unset;
+    text-decoration: unset;
+    transition: all 0.3s;
+
+    @include hover {
+      color: $color-dark-sage;
+    }
+
+    &::after {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: $color-danger;
+      border-radius: 50%;
+    }
+
+    &--active {
+      color: $color-dark-sage;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__body-cards {
+    display: flex;
+    gap: 20px;
+
+    @include mq(lg) {
+      overflow: auto;
+    }
+
+    .main__card {
+      max-width: 100%;
+      min-height: 344px;
+    }
+  }
+
+  &__body-slider-thumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+
+    @include mq(md) {
+      margin-top: 50px;
+    }
+  }
+
+  &__articles-title {
+    font-size: 28px;
+    color: $color-nordic;
+    margin-bottom: 16px;
+  }
+
+  &__articles-subtitle {
+    font-size: 18px;
+    color: $color-dark-green;
+  }
+
+  &__articles-paragraph {
+    font-size: 17px;
+    margin: 12px 0;
+    color: $color-dark-sage;
+    transition: height 0.3s ease;
+
+    &--collapsed {
+      height: 0px;
+      margin: unset;
+      overflow: hidden;
+    }
+
+    &--expanded {
+      height: auto;
+    }
+  }
+
+  &__articles-button {
+    font-size: 17px;
+    width: fit-content;
+    color: $color-steel-blue;
+    background: unset;
+    border: unset;
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+    @include mq(md) {
+      margin-top: 50px;
+    }
+  }
+
+  &__accordion-title {
+    font-size: 44px;
+    color: $color-nordic;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__accordion-item {
+    margin-bottom: 10px;
+  }
+
+  &__accordion-button {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-pastel-blue;
+    transition: all 0.3s ease;
+
+    @include mq(md) {
+      padding: 5px 0;
+    }
+
+    @include hover {
+      font-weight: 700;
+
+      svg path {
+        stroke: $color-danger;
+      }
+    }
+
+    &.active {
+      font-weight: 700;
+      border-bottom: unset;
+    }
+  }
+
+  &__accordion-content {
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+
+  &__accordion-content-title {
+    font-size: 20px;
+  }
+
+  &__accordion-content-text {
+    font-size: 18px;
+    margin: 10px 0;
+    color: $color-dark-sage;
+    padding-left: 110px;
+
+    @include mq(md) {
+      padding-left: unset;
+    }
+
+    a {
+      color: $color-danger;
+    }
+  }
+
+  .icon {
+    transition: transform 0.3s ease;
+  }
+
+  .icon.rotate {
+    transform: rotate(45deg);
+  }
+
+  &__side-part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: $color-light-ice;
+    width: 100%;
+    max-width: 290px;
+
+    @include mq(md) {
+      max-width: 100%;
+      padding: 12px;
+    }
+
+    .main__card {
+      @include mq(xs) {
+        max-width:  160px;
+        min-width: unset;
+      }
+    }
+  }
+
+  &__side-start {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__side-title {
+    font-size: 44px;
+    color: $color-nordic;
+
+    @include mq(md) {
+      font-size: 40px;
+    }
+  }
+
+  &__side-subtitle {
+    color: $color-steel-blue;
+  }
+
+  &__side-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mq(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+  }
+
+  // main-card-styles
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 290px;
+    min-width: 250px;
+    background: $color-white;
+    border: 1px dashed $color-pastel-blue;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @include hover {
+      border: 1px solid $color-teal;
+      -webkit-box-shadow: 0px 4px 15px 0px $color-nordic-10;
+      -moz-box-shadow: 0px 4px 15px 0px $color-nordic-10;
+      box-shadow: 0px 4px 15px 0px $color-nordic-10;
+
+      .main__card-title {
+        color: $color-teal;
+      }
+    }
+  }
+
+  &__card-img {
+    max-height: 185px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--mango {
+      background-color: #24888808;
+    }
+  }
+
+  &__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  &__card-start {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-pretitle {
+    font-size: 14px;
+    width: fit-content;
+    color: $color-steel-blue;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    text-decoration: unset;
+
+    @include hover {
+      color: $color-danger;
+    }
+  }
+
+  &__card-title {
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s;
+
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+
+  &__card-end {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5px;
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__card-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-text {
+    font-size: 14px;
+    color: $color-steel-blue;
+    transition: color 0.3s;
+
+    @include hover {
+      color: $color-danger;
+    }
+  }
+
+  &__card-sale {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card-sale-text {
+    font-size: 14px;
+    padding: 4px 8px;
+    border: 1px solid $color-steel-blue;
+    border-radius: 4px;
+
+    &--outline {
+      color: $color-steel-blue;
+      background: $color-white;
+    }
+
+    &--fill {
+      color: $color-white;
+      background: $color-steel-blue;
+    }
+  }
+
+  &__side-button {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    width: fit-content;
+    padding: 11px 20px 14px 20px;
+    color: $color-dark-sage;
+    background: $color-white;
+    border-radius: 10px;
+    border: unset;
+    transition: all 0.3s;
+
+    @include mq(md) {
+      align-self: center;
+    }
+
+    @include hover {
+      padding-right: 30px;
+
+      #{$self}__button-add::after {
+        display: none;
+      }
+
+      #{$self}__button-plus {
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+      }
+    }
+  }
+
+  &__button-add {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    padding: 4px;
+    border-radius: 50%;
+    background: $color-light-ice;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: $color-steel-blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__button-plus {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    background: $color-steel-blue;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+}

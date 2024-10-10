@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <title>SaleTest</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="/" class="header__logo">Logo</a>
+          <div class="header__inner-wrapper">
+            <div class="header__main is-desktop">
+              <button class="header__menu-button">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 6H21"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 12H21"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 18H21"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 6H3.01"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 12H3.01"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 18H3.01"
+                    stroke="#FF2E4C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span> Все предложения </span>
+              </button>
+              <nav class="header__nav">
+                <ul id="header__menu"></ul>
+              </nav>
+            </div>
+            <div class="header__end">
+              <div class="header__search">
+                <input
+                  type="text"
+                  class="header__search-field"
+                  placeholder="Поиск..."
+                />
+                <div class="header__search-icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.8333 32.1667C27.988 32.1667 32.1667 27.988 32.1667 22.8333C32.1667 17.6787 27.988 13.5 22.8333 13.5C17.6787 13.5 13.5 17.6787 13.5 22.8333C13.5 27.988 17.6787 32.1667 22.8333 32.1667Z"
+                      stroke="#248888"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M34.5001 34.5001L29.4834 29.4834"
+                      stroke="#248888"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="header__end-actions">
+                <a
+                  href="http://t.me/elijon0110"
+                  class="header__social is-desktop"
+                >
+                  <svg
+                    width="19"
+                    height="17"
+                    viewBox="0 0 19 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                      fill="#001C1C"
+                    />
+                  </svg>
+                </a>
+                <a href="/" class="header__signin is-desktop"
+                  ><svg
+                    width="22"
+                    height="21"
+                    viewBox="0 0 22 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 19C0.999916 17.4603 1.44413 15.9533 2.27935 14.6598C3.11456 13.3664 4.30527 12.3414 5.7086 11.708C7.11193 11.0745 8.66824 10.8595 10.1908 11.0886C11.7133 11.3178 13.1373 11.9815 14.292 13"
+                      stroke="#001C1C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 11C11.7614 11 14 8.76142 14 6C14 3.23858 11.7614 1 9 1C6.23858 1 4 3.23858 4 6C4 8.76142 6.23858 11 9 11Z"
+                      stroke="#001C1C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18 14V20"
+                      stroke="#FF2E4C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21 17H15"
+                      stroke="#FF2E4C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <div class="header__change-lang">Ру</div>
+              </div>
+              <button class="header__button is-desktop">
+                Добавить скидку
+                <div class="header__button-add">
+                  <p class="header__button-plus">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 19V5"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </p>
+                </div>
+              </button>
+              <button id="sidebarBtn" class="header__burger-menu is-mobile">
+                <svg
+                  width="24"
+                  height="2"
+                  viewBox="0 0 24 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23 1H1"
+                    stroke="#248888"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="2"
+                  viewBox="0 0 24 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23 1H1"
+                    stroke="#248888"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="2"
+                  viewBox="0 0 24 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23 1H1"
+                    stroke="#248888"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside id="sidebar" class="header__sidebar is-mobile">
+        <div class="header__sidebar-start">
+          <a href="/" class="header__logo">Logo</a>
+          <button id="closeBtn" class="header__sidebar-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 3.00049L29 29.0005"
+                stroke="#248888"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3 28.9995L29 2.99954"
+                stroke="#248888"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="header__sidebar-links-wrapper">
+          <li><a class="header__sidebar-link" href="#">Скидки</a></li>
+          <li><a class="header__sidebar-link" href="#">Акции</a></li>
+          <li><a class="header__sidebar-link" href="#">Промокоды</a></li>
+          <li><a class="header__sidebar-link" href="#">Кешбэк</a></li>
+        </ul>
+      </aside>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__wrapper">
+          <div class="main__side-part">
+            <div class="main__side-start">
+              <h2 class="main__side-title">Скидки дня</h2>
+              <h5 class="main__side-subtitle">23 предложения</h5>
+            </div>
+            <div class="main__side-body">
+              <div class="main__card">
+                <div class="main__card-img">
+                  <img src="/assets/img/korzinka.png" alt="korzinka" />
+                </div>
+                <div class="main__card-info">
+                  <div class="main__card-start">
+                    <a href="/" class="main__card-pretitle">korzinka</a>
+                    <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                  </div>
+                  <div class="main__card-end">
+                    <div class="main__card-texts">
+                      <p class="main__card-text">Скидки</p>
+                      <p class="main__card-text">Супермаркеты</p>
+                    </div>
+                    <div class="main__card-sale">
+                      <div
+                        class="main__card-sale-text main__card-sale-text--outline"
+                      >
+                        Кешбэк
+                      </div>
+                      <div
+                        class="main__card-sale-text main__card-sale-text--fill"
+                      >
+                        3%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__card">
+                <div class="main__card-img main__card-img--mango">
+                  <img src="/assets/img/mango.png" alt="korzinka" />
+                </div>
+                <div class="main__card-info">
+                  <div class="main__card-start">
+                    <a href="/" class="main__card-pretitle">korzinka</a>
+                    <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                  </div>
+                  <div class="main__card-end">
+                    <div class="main__card-texts">
+                      <a href="/" class="main__card-text">Скидки</a>
+                      <a href="/" class="main__card-text">Супермаркеты</a>
+                    </div>
+                    <div class="main__card-sale">
+                      <div
+                        class="main__card-sale-text main__card-sale-text--outline"
+                      >
+                        Кешбэк
+                      </div>
+                      <div
+                        class="main__card-sale-text main__card-sale-text--fill"
+                      >
+                        3%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__card">
+                <div class="main__card-img">
+                  <img src="/assets/img/makro.png" alt="korzinka" />
+                </div>
+                <div class="main__card-info">
+                  <div class="main__card-start">
+                    <a href="/" class="main__card-pretitle">korzinka</a>
+                    <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                  </div>
+                  <div class="main__card-end">
+                    <div class="main__card-texts">
+                      <a href="/" class="main__card-text">Скидки</a>
+                      <p href="/" class="main__card-text">Супермаркеты</p>
+                    </div>
+                    <div class="main__card-sale">
+                      <div
+                        class="main__card-sale-text main__card-sale-text--outline"
+                      >
+                        Кешбэк
+                      </div>
+                      <div
+                        class="main__card-sale-text main__card-sale-text--fill"
+                      >
+                        3%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__card">
+                <div class="main__card-img">
+                  <img src="/assets/img/texno.png" alt="korzinka" />
+                </div>
+                <div class="main__card-info">
+                  <div class="main__card-start">
+                    <a href="/" class="main__card-pretitle">korzinka</a>
+                    <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                  </div>
+                  <div class="main__card-end">
+                    <div class="main__card-texts">
+                      <a href="/" class="main__card-text">Скидки</a>
+                      <a href="/" class="main__card-text">Супермаркеты</a>
+                    </div>
+                    <div class="main__card-sale">
+                      <div
+                        class="main__card-sale-text main__card-sale-text--outline"
+                      >
+                        Кешбэк
+                      </div>
+                      <div
+                        class="main__card-sale-text main__card-sale-text--fill"
+                      >
+                        3%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="main__side-button">
+              Показать все
+              <div class="main__button-add">
+                <p class="main__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12H19"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 19V5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="main__body-wrapper">
+            <div class="main__body-inner-wrapper">
+              <h1 class="main__title">Топовые скидки</h1>
+              <button class="main__body-slide-button is-desktop">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="main__body-dot is-desktop"></div>
+              <div class="main__body-tabs">
+                <button class="main__body-tab">Питание</button>
+                <button class="main__body-tab">Связь</button>
+                <button class="main__body-tab">Магазины</button>
+              </div>
+              <div class="main__body-cards">
+                <div class="main__card">
+                  <div class="main__card-img main__card-img--mango">
+                    <img src="/assets/img/mango.png" alt="korzinka" />
+                  </div>
+                  <div class="main__card-info">
+                    <div class="main__card-start">
+                      <a href="/" class="main__card-pretitle">korzinka</a>
+                      <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                    </div>
+                    <div class="main__card-end">
+                      <div class="main__card-texts">
+                        <a href="/" class="main__card-text">Скидки</a>
+                        <a href="/" class="main__card-text">Супермаркеты</a>
+                      </div>
+                      <div class="main__card-sale">
+                        <div
+                          class="main__card-sale-text main__card-sale-text--outline"
+                        >
+                          Кешбэк
+                        </div>
+                        <div
+                          class="main__card-sale-text main__card-sale-text--fill"
+                        >
+                          3%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__card">
+                  <div class="main__card-img">
+                    <img src="/assets/img/makro.png" alt="korzinka" />
+                  </div>
+                  <div class="main__card-info">
+                    <div class="main__card-start">
+                      <a href="/" class="main__card-pretitle">korzinka</a>
+                      <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                    </div>
+                    <div class="main__card-end">
+                      <div class="main__card-texts">
+                        <a href="/" class="main__card-text">Скидки</a>
+                        <a href="/" class="main__card-text">Супермаркеты</a>
+                      </div>
+                      <div class="main__card-sale">
+                        <div
+                          class="main__card-sale-text main__card-sale-text--outline"
+                        >
+                          Кешбэк
+                        </div>
+                        <div
+                          class="main__card-sale-text main__card-sale-text--fill"
+                        >
+                          3%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__card">
+                  <div class="main__card-img">
+                    <img src="/assets/img/texno.png" alt="korzinka" />
+                  </div>
+                  <div class="main__card-info">
+                    <div class="main__card-start">
+                      <a href="/" class="main__card-pretitle">korzinka</a>
+                      <h5 class="main__card-title">В четверг скидки на рыбу</h5>
+                    </div>
+                    <div class="main__card-end">
+                      <div class="main__card-texts">
+                        <a href="/" class="main__card-text">Скидки</a>
+                        <a href="/" class="main__card-text">Супермаркеты</a>
+                      </div>
+                      <div class="main__card-sale">
+                        <div
+                          class="main__card-sale-text main__card-sale-text--outline"
+                        >
+                          Кешбэк
+                        </div>
+                        <div
+                          class="main__card-sale-text main__card-sale-text--fill"
+                        >
+                          3%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__body-slider-thumbs">
+                <svg
+                  width="36"
+                  height="8"
+                  viewBox="0 0 36 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="3"
+                    cy="3"
+                    r="3"
+                    transform="matrix(-1 0 0 1 6 1)"
+                    fill="#BEDADA"
+                  />
+                  <rect x="14" width="8" height="8" rx="4" fill="#607282" />
+                  <circle
+                    cx="3"
+                    cy="3"
+                    r="3"
+                    transform="matrix(-1 0 0 1 36 1)"
+                    fill="#BEDADA"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="main__articles">
+              <h4 class="main__articles-title">Добро пожаловать на сайт</h4>
+              <p class="main__articles-subtitle">
+                Ваш надёжный помощник в поиске лучших скидок и акций различных
+                компаний!
+              </p>
+              <p
+                class="main__articles-paragraph main__articles-paragraph--collapsed main__articles-paragraph--expanded"
+              >
+                Мы собрали для вас все самые выгодные предложения,
+                чтобы вы могли сэкономить свои деньги и получить максимум
+                удовольствия от покупок.
+              </p>
+              <button id="toggleButton" class="main__articles-button">
+                Развернуть текст
+              </button>
+            </div>
+            <div class="main__accordion">
+              <h2 class="main__accordion-title">faq</h2>
+              <div class="main__accordion-item">
+                <button class="main__accordion-button">
+                  Какие компании представлены на сайте?
+                  <svg
+                    class="icon"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 0" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="main__accordion-content">
+                  <p class="main__accordion-content-text">
+                    Чтобы быть в курсе новых скидок и акций на сайте, вы можете
+                    подписаться на наш
+                    <span>
+                      <a href="http://t.me/elijon0110"> телеграм-канал</a></span
+                    >
+                    или следить за новостями. Мы регулярно отправляем информацию
+                    о новых предложениях и акциях нашим подписчикам,
+                    чтобы они всегда могли быть в курсе последних скидок
+                    и эксклюзивных предложений. Также можно регулярно посещать
+                    сайт и проверять разделы с акциями и скидками
+                  </p>
+                </div>
+              </div>
+              <div class="main__accordion-item">
+                <button class="main__accordion-button">
+                  Какие компании представлены на сайте?
+                  <svg
+                    class="icon"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 0" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="main__accordion-content">
+                  <p class="main__accordion-content-text">
+                    Чтобы быть в курсе новых скидок и акций на сайте, вы можете
+                    подписаться на наш
+                    <span>
+                      <a href="http://t.me/elijon0110"> телеграм-канал</a></span
+                    >
+                    или следить за новостями. Мы регулярно отправляем информацию
+                    о новых предложениях и акциях нашим подписчикам,
+                    чтобы они всегда могли быть в курсе последних скидок
+                    и эксклюзивных предложений. Также можно регулярно посещать
+                    сайт и проверять разделы с акциями и скидками
+                  </p>
+                </div>
+              </div>
+              <div class="main__accordion-item">
+                <button class="main__accordion-button">
+                  Какие компании представлены на сайте?
+                  <svg
+                    class="icon"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 0" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="main__accordion-content">
+                  <p class="main__accordion-content-text">
+                    Чтобы быть в курсе новых скидок и акций на сайте, вы можете
+                    подписаться на наш
+                    <span>
+                      <a href="http://t.me/elijon0110"> телеграм-канал</a></span
+                    >
+                    или следить за новостями. Мы регулярно отправляем информацию
+                    о новых предложениях и акциях нашим подписчикам,
+                    чтобы они всегда могли быть в курсе последних скидок
+                    и эксклюзивных предложений. Также можно регулярно посещать
+                    сайт и проверять разделы с акциями и скидками
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/script/javascript/index.js"></script>
+  </body>
+</html>

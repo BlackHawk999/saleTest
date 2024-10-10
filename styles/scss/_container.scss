@@ -1,0 +1,28 @@
+@import "mixins";
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include mq(xxl) {
+    max-width: 1400px;
+  }
+
+  @include mq(xl) {
+    max-width: 1220px;
+  }
+
+  @include mq(lg) {
+    max-width: 992px;
+  }
+
+  @include mq(md) {
+    max-width: 768px;
+  }
+
+  @include mq(sm) {
+    max-width: 100%;
+  }
+}

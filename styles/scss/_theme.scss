@@ -1,0 +1,25 @@
+$color-white: #ffffff;
+$color-nordic: #023131;
+$color-nordic-10: #0231311A;
+$color-dark-green: #001C1C;
+$color-danger:#FF2E4C;
+$color-danger-light: #FFEDEF;
+$color-teal: #248888;
+$color-steel-blue: #607282;
+$color-light-ice: #F0F6F6;
+$color-pastel-blue: #BEDADA;
+$color-dark-sage: #3C5858;
+
+// Container-sizes
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  // mobile landscape, tablet (portrait)
+  md: 992px,
+  // chromebooks, ipad pro (portrait), tablet (landscape)
+  lg: 1220px,
+  // most laptops and desktops
+  xl: 1400px,
+  xxl: 1920px,
+);
+
